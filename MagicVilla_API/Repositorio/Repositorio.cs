@@ -1,6 +1,8 @@
 ﻿using MagicVilla_API.Datos;
 using MagicVilla_API.Repositorio.IRepositorio;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Conventions;
+using Microsoft.EntityFrameworkCore.Query;
 using System.Linq.Expressions;
 
 namespace MagicVilla_API.Repositorio
@@ -26,7 +28,7 @@ namespace MagicVilla_API.Repositorio
            await _db.SaveChangesAsync();
         }
 
-        public async Task<T> Obtener(Expression<Func<T, bool>>? filtro = null, bool tracked = true)
+        public async Task<T> Obtener(Expression<Func<T, bool>>? filtro = null, bool tracked = true, string? incluirPropiedades = null)
         {
             IQueryable<T> query = dbSet;
             if (!tracked)
@@ -37,15 +39,29 @@ namespace MagicVilla_API.Repositorio
             {
                 query = query.Where(filtro);
             }
+            if (incluirPropiedades!= null)
+            {
+                foreach (var incluirProp in incluirPropiedades.Split(new char[] { ','}, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    query = query.Include(incluirProp);
+                }
+            }
             return await query.FirstOrDefaultAsync();
         }
 
-        public async Task<List<T>> ObtenerTodos(Expression<Func<T, bool>>? filtro = null)
+        public async Task<List<T>> ObtenerTodos(Expression<Func<T, bool>>? filtro = null, string? incluirPropiedades = null)
         {
             IQueryable<T> query = dbSet;
             if (filtro != null)
             {
                 query = query.Where(filtro);
+            }
+            if (incluirPropiedades != null)
+            {
+                foreach (var incluirProp in incluirPropiedades.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    query = query.Include(incluirProp);
+                }
             }
             return await query.ToListAsync();
         }

@@ -1,4 +1,5 @@
-﻿using System.Linq.Expressions;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Linq.Expressions;
 
 namespace MagicVilla_API.Repositorio.IRepositorio
 {
@@ -6,8 +7,8 @@ namespace MagicVilla_API.Repositorio.IRepositorio
     {
         Task Crear(T entidad);
 
-        Task<List<T>> ObtenerTodos(Expression<Func<T, bool>>? filtro=null);
-        Task<T> Obtener(Expression<Func<T, bool>>? filtro = null, bool tracked = true);
+        Task<List<T>> ObtenerTodos(Expression<Func<T, bool>>? filtro=null, string? incluirPropiedades = null);
+        Task<T> Obtener(Expression<Func<T, bool>>? filtro = null, bool tracked = true, string? incluirPropiedades = null);
         Task Remover(T entidad);
         Task Grabar();
 

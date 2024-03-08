@@ -80,3 +80,4 @@ E:\personalprojects\MagicVilla\MagicVilla\MagicVilla_API\bin\Debug\net7.0\runtim
 E:\personalprojects\MagicVilla\MagicVilla\MagicVilla_API\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 E:\personalprojects\MagicVilla\MagicVilla\MagicVilla_API\bin\Debug\net7.0\AutoMapper.dll
 E:\personalprojects\MagicVilla\MagicVilla\MagicVilla_API\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+E:\personalprojects\MagicVilla\MagicVilla\MagicVilla_API\obj\Debug\net7.0\MagicVilla_API.sourcelink.json
