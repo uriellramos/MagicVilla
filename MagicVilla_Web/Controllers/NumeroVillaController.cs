@@ -5,6 +5,8 @@ using MagicVilla_Web.Models.ViewModel;
 using MagicVilla_Web.Services.IServices;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.Build.Framework;
+using Microsoft.Build.Logging;
 using Newtonsoft.Json;
 using System.Reflection.Metadata.Ecma335;
 
@@ -159,6 +161,19 @@ namespace MagicVilla_Web.Controllers
                 return View(numeroVillaVM);
             }
             return NotFound();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> RemoverNumeroVilla(NumeroVillaViewModel modelo)
+        {
+            var response = await _numeroVillaService.Remover<APIResponse>(modelo.NumeroVilla.VillaNo);
+            if (response != null &&  response.IsExitoso) 
+            {
+                return RedirectToAction(nameof(IndexNumeroVilla));
+            }
+            return View(modelo);
+
         }
 
     }
