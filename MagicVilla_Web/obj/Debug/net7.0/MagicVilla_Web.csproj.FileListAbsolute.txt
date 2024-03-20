@@ -33,7 +33,6 @@ E:\personalprojects\MagicVilla\MagicVilla\MagicVilla_Web\bin\Debug\net7.0\AutoMa
 E:\personalprojects\MagicVilla\MagicVilla\MagicVilla_Web\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 E:\personalprojects\MagicVilla\MagicVilla\MagicVilla_Web\bin\Debug\net7.0\MagicVilla_Utilidad.dll
 E:\personalprojects\MagicVilla\MagicVilla\MagicVilla_Web\bin\Debug\net7.0\MagicVilla_Utilidad.pdb
-E:\personalprojects\MagicVilla\MagicVilla\MagicVilla_Web\obj\Debug\net7.0\MagicVilla_Web.csproj.CopyComplete
 E:\personalprojects\MagicVilla\MagicVilla\MagicVilla_Web\bin\Debug\net7.0\Humanizer.dll
 E:\personalprojects\MagicVilla\MagicVilla\MagicVilla_Web\bin\Debug\net7.0\Microsoft.AspNetCore.Razor.Language.dll
 E:\personalprojects\MagicVilla\MagicVilla\MagicVilla_Web\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
@@ -226,3 +225,4 @@ E:\personalprojects\MagicVilla\MagicVilla\MagicVilla_Web\bin\Debug\net7.0\runtim
 E:\personalprojects\MagicVilla\MagicVilla\MagicVilla_Web\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 E:\personalprojects\MagicVilla\MagicVilla\MagicVilla_Web\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 E:\personalprojects\MagicVilla\MagicVilla\MagicVilla_Web\obj\Debug\net7.0\MagicVilla_Web.sourcelink.json
+E:\personalprojects\MagicVilla\MagicVilla\MagicVilla_Web\obj\Debug\net7.0\MagicVil.F5E7C950.Up2Date

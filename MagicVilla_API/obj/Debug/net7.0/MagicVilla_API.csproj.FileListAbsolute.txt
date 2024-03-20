@@ -25,7 +25,6 @@ E:\personalprojects\MagicVilla\MagicVilla\MagicVilla_API\obj\Debug\net7.0\static
 E:\personalprojects\MagicVilla\MagicVilla\MagicVilla_API\obj\Debug\net7.0\staticwebassets.build.json
 E:\personalprojects\MagicVilla\MagicVilla\MagicVilla_API\obj\Debug\net7.0\staticwebassets.development.json
 E:\personalprojects\MagicVilla\MagicVilla\MagicVilla_API\obj\Debug\net7.0\scopedcss\bundle\MagicVilla_API.styles.css
-E:\personalprojects\MagicVilla\MagicVilla\MagicVilla_API\obj\Debug\net7.0\MagicVilla_API.csproj.CopyComplete
 E:\personalprojects\MagicVilla\MagicVilla\MagicVilla_API\obj\Debug\net7.0\MagicVilla_API.dll
 E:\personalprojects\MagicVilla\MagicVilla\MagicVilla_API\obj\Debug\net7.0\refint\MagicVilla_API.dll
 E:\personalprojects\MagicVilla\MagicVilla\MagicVilla_API\obj\Debug\net7.0\MagicVilla_API.pdb
@@ -81,3 +80,5 @@ E:\personalprojects\MagicVilla\MagicVilla\MagicVilla_API\bin\Debug\net7.0\runtim
 E:\personalprojects\MagicVilla\MagicVilla\MagicVilla_API\bin\Debug\net7.0\AutoMapper.dll
 E:\personalprojects\MagicVilla\MagicVilla\MagicVilla_API\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 E:\personalprojects\MagicVilla\MagicVilla\MagicVilla_API\obj\Debug\net7.0\MagicVilla_API.sourcelink.json
+E:\personalprojects\MagicVilla\MagicVilla\MagicVilla_API\obj\Debug\net7.0\MagicVil.109595B4.Up2Date
+E:\personalprojects\MagicVilla\MagicVilla\MagicVilla_API\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
