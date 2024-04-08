@@ -4,6 +4,7 @@ using MagicVilla_Web.Services.IServices;
 using Newtonsoft.Json;
 using System.Net;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Text.Json.Serialization;
 
@@ -15,7 +16,7 @@ namespace MagicVilla_Web.Services
         public IHttpClientFactory _httpClient { get; set; }
         public BaseService(IHttpClientFactory httpClient)
         {
-            this.responseModel = new ();
+            this.responseModel = new();
             _httpClient = httpClient;
         }
         public async Task<T> SendAsync<T>(APIRequest apiRequest)
@@ -24,7 +25,7 @@ namespace MagicVilla_Web.Services
             {
                 var client = _httpClient.CreateClient("MagicAPI");
                 HttpRequestMessage message = new HttpRequestMessage();
-                message.Headers.Add("Accept","application/json");
+                message.Headers.Add("Accept", "application/json");
                 message.RequestUri = new Uri(apiRequest.Url);
 
                 if (apiRequest.Datos != null)
@@ -32,7 +33,7 @@ namespace MagicVilla_Web.Services
                     message.Content = new StringContent(JsonConvert.SerializeObject(apiRequest.Datos), Encoding.UTF8, "application/json");
                 }
                 switch (apiRequest.APITipo)
-                {   
+                {
                     case DS.APITipo.POST:
                         message.Method = HttpMethod.Post;
                         break;
@@ -47,13 +48,20 @@ namespace MagicVilla_Web.Services
                         break;
                 }
                 HttpResponseMessage apiResponse = null;
+
+                if (!string.IsNullOrEmpty(apiRequest.Token))
+                {
+                    client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", apiRequest.Token);
+                }
+
                 apiResponse = await client.SendAsync(message);
                 var apiContent = await apiResponse.Content.ReadAsStringAsync();
                 //var APIResponse = JsonConvert.DeserializeObject<T>(apiContent);
                 try
                 {
                     APIResponse response = JsonConvert.DeserializeObject<APIResponse>(apiContent);
-                    if (apiResponse.StatusCode == HttpStatusCode.BadRequest || apiResponse.StatusCode == HttpStatusCode.NotFound) {
+                    if (apiResponse.StatusCode == HttpStatusCode.BadRequest || apiResponse.StatusCode == HttpStatusCode.NotFound)
+                    {
                         response.statusCode = HttpStatusCode.BadRequest;
                         var res = JsonConvert.SerializeObject(response);
                         var obj = JsonConvert.DeserializeObject<T>(res);
