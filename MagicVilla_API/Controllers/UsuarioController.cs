@@ -7,8 +7,9 @@ using System.Net;
 
 namespace MagicVilla_API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
+    [ApiVersionNeutral]
     public class UsuarioController : ControllerBase
     {
         private readonly IUsuarioRepositorio _usuarioRepo;
@@ -16,10 +17,11 @@ namespace MagicVilla_API.Controllers
         public UsuarioController(IUsuarioRepositorio usuarioRepo)
         {
             _usuarioRepo = usuarioRepo;
-            _response = new APIResponse(); 
+            _response = new APIResponse();
         }
         [HttpPost("login")]
-        public async Task<IActionResult> login([FromBody] LoginRequestDTO modelo) {
+        public async Task<IActionResult> login([FromBody] LoginRequestDTO modelo)
+        {
             var loginResponse = await _usuarioRepo.Login(modelo);
             if (loginResponse.Usuario == null || string.IsNullOrEmpty(loginResponse.Token))
             {
