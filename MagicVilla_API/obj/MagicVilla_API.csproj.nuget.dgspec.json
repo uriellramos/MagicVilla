@@ -63,6 +63,10 @@
               "target": "Package",
               "version": "[7.0.17, )"
             },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
             "Microsoft.AspNetCore.JsonPatch": {
               "target": "Package",
               "version": "[7.0.5, )"

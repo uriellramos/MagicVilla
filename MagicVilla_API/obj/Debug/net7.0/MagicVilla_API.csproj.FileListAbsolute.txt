@@ -82,3 +82,11 @@ E:\personalprojects\MagicVilla\MagicVilla\MagicVilla_API\bin\Debug\net7.0\AutoMa
 E:\personalprojects\MagicVilla\MagicVilla\MagicVilla_API\obj\Debug\net7.0\MagicVilla_API.sourcelink.json
 E:\personalprojects\MagicVilla\MagicVilla\MagicVilla_API\obj\Debug\net7.0\MagicVil.109595B4.Up2Date
 E:\personalprojects\MagicVilla\MagicVilla\MagicVilla_API\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\personalprojects\MagicVilla\MagicVilla\MagicVilla_API\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+E:\personalprojects\MagicVilla\MagicVilla\MagicVilla_API\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+E:\personalprojects\MagicVilla\MagicVilla\MagicVilla_API\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+E:\personalprojects\MagicVilla\MagicVilla\MagicVilla_API\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.Versioning.dll
+E:\personalprojects\MagicVilla\MagicVilla\MagicVilla_API\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer.dll
+E:\personalprojects\MagicVilla\MagicVilla\MagicVilla_API\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
+E:\personalprojects\MagicVilla\MagicVilla\MagicVilla_API\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
+E:\personalprojects\MagicVilla\MagicVilla\MagicVilla_API\bin\Debug\net7.0\Microsoft.Extensions.Options.dll

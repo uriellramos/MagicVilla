@@ -4,6 +4,7 @@ using MagicVilla_Web.Models;
 using MagicVilla_Web.Models.Dto;
 using MagicVilla_Web.Models.ViewModel;
 using MagicVilla_Web.Services.IServices;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Build.Framework;
@@ -25,8 +26,8 @@ namespace MagicVilla_Web.Controllers
 			_villaService = villaService;
 			_mapper = mapper;
 		}
-
-		public async Task<IActionResult> IndexNumeroVilla()
+        [Authorize(Roles = "admin")]
+        public async Task<IActionResult> IndexNumeroVilla()
 		{
 			List<NumeroVillaDto> numeroVillaList = new();
 
@@ -39,8 +40,8 @@ namespace MagicVilla_Web.Controllers
 
 			return View(numeroVillaList); 
 		}
-
-		public async Task<IActionResult> CrearNumeroVilla()
+        [Authorize(Roles = "admin")]
+        public async Task<IActionResult> CrearNumeroVilla()
 		{
 			NumeroVillaViewModel numeroVillaVM = new NumeroVillaViewModel();
 			var response = await _villaService.ObtenerTodos<APIResponse>(HttpContext.Session.GetString(DS.SessionToken));
@@ -85,8 +86,8 @@ namespace MagicVilla_Web.Controllers
             }
             return View(modelo);
 		}
-
-		public async Task<IActionResult> ActualizarNumeroVilla(int villaNo)
+        [Authorize(Roles = "admin")]
+        public async Task<IActionResult> ActualizarNumeroVilla(int villaNo)
 		{
             NumeroVillaUpdateViewModel numeroVillaVM = new ();
 
@@ -140,7 +141,7 @@ namespace MagicVilla_Web.Controllers
             }
             return View(modelo);
         }
-
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> RemoverNumeroVilla(int villaNo)
         {
             NumeroVillaDeleteViewModel numeroVillaVM = new();
